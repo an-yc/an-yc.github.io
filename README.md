@@ -1,6 +1,6 @@
 # Hello, I am Anissa!
 
-Final year law student at CUHK, passionate about technology and innovation
+Final year law student at CUHK, passionate about technology and innovation.
 
 ### Education
 
