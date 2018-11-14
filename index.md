@@ -28,4 +28,4 @@ Final year law student at CUHK, passionate about technology and innovation
 ### Skills
 
 * Fluent in English, Cantonese and Mandarin
-* Beginner level coding in Python and web development
+* Beginner level coding in Python and basic web development in HTML, CSS and JavaScript
