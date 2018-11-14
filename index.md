@@ -29,3 +29,5 @@ Final year law student at CUHK, passionate about technology and innovation
 
 * Fluent in English, Cantonese and Mandarin
 * Beginner level coding in Python and basic web development in HTML, CSS and JavaScript
+
+You can reach me at anissa.ng(at)link.cuhk.edu.hk
