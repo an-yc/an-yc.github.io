@@ -1,4 +1,4 @@
-# Hi, I'm Anissa
+
 Final year law student at CUHK. Passionate about technology and innovation.
 
 [My home page](https://an-yc.github.io/)
