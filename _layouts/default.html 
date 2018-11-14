@@ -29,8 +29,8 @@
         {% endif %}
 
         {% if site.github.is_user_page %}
-        <p>Welcome to my page</p>
-        <p>You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
+        <p>Welcome to my page.
+          You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
         <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
         {% endif %}
 
