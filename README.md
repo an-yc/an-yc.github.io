@@ -1,3 +1,7 @@
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="favicon.png">
+</head>
+
 ## Hello, I am Anissa!
 
 Final year law student at CUHK, passionate about technology and innovation.
@@ -21,5 +25,3 @@ Final year law student at CUHK, passionate about technology and innovation.
 
 * Fluent in English, Cantonese and Mandarin
 * Beginner level coding in Python and web development
-
-<link rel="icon" href="/favicon.png" type="image/x-icon" />
