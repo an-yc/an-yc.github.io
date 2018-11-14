@@ -18,7 +18,7 @@
 }
 
 .button:hover {
-    background-color: green;
+    background-color: grey;
 }
 </style>
     </head>
@@ -47,13 +47,9 @@
         <p>Welcome to my page.
           You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
 
-        <button class="button"><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i>Linkedin</a></button>
-        <button class="button"><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i>GitHub</a></button>
+        <button class="button"><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i> LinkedIn</a></button>
+        <button class="button"><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i> GitHub</a></button>
 
-          <ul class="downloads">
-           <li><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong>Linkedin</strong></a></li>
-           <li><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i><strong>GitHub</strong></a></li>
-         </ul>
 
          {% if site.github.is_project_page %}
          <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
