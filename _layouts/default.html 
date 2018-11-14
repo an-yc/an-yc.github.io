@@ -34,10 +34,14 @@
           You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
 
           <ul class="downloads">
-           <li><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-fw fa-1x py-1 fa-linkedin"></i><strong>Linkedin</strong></a></li>
-           <li><a href="{{ site.github.owner_url }}"><i class="fa fa-fw fa-1x py-1 fa-github"></i><strong>GitHub</strong></a></li>
+           <li><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong>Linkedin</strong></a></li>
+           <li><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i><strong>GitHub</strong></a></li>
          </ul>
 
+         {% if site.github.is_project_page %}
+         <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
+         {% endif %}
+         <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
         {% endif %}
 
       </header>
@@ -46,12 +50,7 @@
       {{ content }}
 
       </section>
-      <footer>
-        {% if site.github.is_project_page %}
-        <p>This project is maintained by <a href="{{ site.github.owner_url }}">{{ site.github.owner_name }}</a></p>
-        {% endif %}
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
+
     </div>
     <script src="{{ "/assets/js/scale.fix.js" | relative_url }}"></script>
     {% if site.google_analytics %}
