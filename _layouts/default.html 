@@ -10,16 +10,14 @@
     <style>
 .button {
     background-color: white;
+    border-color: black;
     border: 1px;
-    padding: 10px 18px;
+    padding: 5px 10px;
     text-align: center;
     font-size: 12px;
     justify-content:flex;
 }
 
-.button:hover {
-    background-color: grey;
-}
 </style>
     </head>
 
@@ -46,7 +44,7 @@
         {% if site.github.is_user_page %}
         <p>Welcome to my page.
           You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
-        <p><button class="button"> style="float: center"<a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong> Linkedin</strong></a></button>
+        <p><button class="button"><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong> Linkedin</strong></a></button>
         <button class="button"><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i><strong> GitHub</strong></a></button></p>
 
          {% if site.github.is_project_page %}
