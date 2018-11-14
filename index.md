@@ -8,7 +8,7 @@ layout: default
 
 ## Hello, I am Anissa!
 
-Final year law student at CUHK, passionate about technology and innovation.
+Final year law student at CUHK, passionate about technology and innovation
 
 ### Education
 
@@ -22,7 +22,7 @@ Final year law student at CUHK, passionate about technology and innovation.
 
 ### Experience
 
-* I have interned at various law firms, including Sidley Austin and BCLP.
+* I have interned at various law firms, including Sidley Austin and BCLP
 * I am currently looking for summer internship opportunities in the tech and start-up field
 
 ### Skills
