@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <style>
 .button {
-    background-color: #4CAF50;
+    background-color: black;
     border: none;
     color: white;
     padding: 10px 18px;
@@ -47,8 +47,8 @@
         <p>Welcome to my page.
           You can reach me at anissa.ng(at)link.cuhk.edu.hk</p>
 
-        <button class="button"><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong>Linkedin</strong></a></button>
-        <button class="button"><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i><strong>GitHub</strong></a></button>
+        <button class="button"><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i>Linkedin</a></button>
+        <button class="button"><a href="{{ site.github.owner_url }}"><i class="fab fa-github"></i>GitHub</a></button>
 
           <ul class="downloads">
            <li><a href="https://www.linkedin.com/in/anissa-ng-137144a7/"><i class="fab fa-linkedin"></i><strong>Linkedin</strong></a></li>
