@@ -10,7 +10,7 @@ Final year law student at CUHK, passionate about technology and innovation.
 ### Projects
 
 * Currently enrolled in EPIN1020 Design Thinking and Practice, check out [my repository for the course](https://an-yc.github.io/epin1020/)
-* Working on a campus project, CUHub, an information platform for events happening on campus 
+* Working on a campus project, CUHub, an information platform for events happening on campus
 
 ### Experience
 
@@ -21,3 +21,5 @@ Final year law student at CUHK, passionate about technology and innovation.
 
 * Fluent in English, Cantonese and Mandarin
 * Beginner level coding in Python and web development
+
+<link rel="icon" href="/favicon.png" type="image/x-icon" />
