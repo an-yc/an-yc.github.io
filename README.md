@@ -1,3 +1,3 @@
-## check out [my home page](an-yc.github.io)
+check out [my home page](an-yc.github.io)
 or
-## check out [my EPIN1020 page](an-yc.github.io/epin1020)
+check out [my EPIN1020 page](an-yc.github.io/epin1020)
