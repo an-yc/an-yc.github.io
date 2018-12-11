@@ -7,6 +7,7 @@ layout: default
 ## Hello, I am Anissa!
 
 Law student at CUHK, passionate about technology and innovation
+
 Currently looking for summer internship opportunities in the tech field
 
 ### Education
