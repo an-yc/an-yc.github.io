@@ -22,7 +22,8 @@ Currently looking for summer internship opportunities in the tech field
 
 ### Experience
 
-* I have interned at various law firms, including Sidley Austin and BCLP, and have worked in California, Shanghai and Hong Kong before.  
+* I have interned at various law firms, including Sidley Austin and BCLP
+* Have worked in California, Shanghai and Hong Kong before
 
 ### Skills
 
