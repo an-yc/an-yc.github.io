@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anissa — Product & AI</title>
+  <title>Anissa - Product, AI, Legal</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia,serif'>A</text></svg>">
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,18 +36,84 @@
       <section class="section animate-on-scroll">
         <div class="section-label">Projects</div>
         <div class="projects">
-          <a href="#" class="project animate-on-scroll">
-            <div class="project-thumb video-thumb">
-              <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
+          <div class="project-expandable">
+            <div class="project project-trigger project-hero animate-on-scroll" role="button" tabindex="0">
+              <div class="project-hero-video" onclick="event.stopPropagation()">
+                <iframe src="https://player.vimeo.com/video/1159191023?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="HKEX Size Tests Assistant Demo"></iframe>
+              </div>
+              <div class="project-hero-bar">
+                <div class="project-info">
+                  <h3>HKEX Size Tests Assistant</h3>
+                  <p>AI-powered tool for Hong Kong Exchange size test calculations</p>
+                </div>
+                <div class="project-hero-actions">
+                  <span class="project-tag">Tool</span>
+                  <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="6 9 12 15 18 9"></polyline>
+                  </svg>
+                </div>
+              </div>
             </div>
-            <div class="project-info">
-              <h3>HKEX Size Tests</h3>
-              <p>Automated generator for Hong Kong Exchange documentation</p>
+            <div class="project-detail">
+              <button class="project-close" aria-label="Close">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="18" y1="6" x2="6" y2="18"></line>
+                  <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+              </button>
+              <div class="project-detail-grid">
+                <div class="project-columns">
+                  <div class="project-left">
+                    <p class="project-desc">A web application that helps professionals prepare issuer-side metrics for the HKEX CF006 Size Tests checklist under Listing Rules Chapter 14. It automates the extraction of key financial data from reports, fetches market capitalization and live Bank of China exchange rates, generates draft disclosures, and maintains a citation log for easy verification.</p>
+                    <div class="project-background">
+                      <h4>Background</h4>
+                      <p>This was a fun project — teaching Claude Code how I usually handle HKEX size tests. To make it genuinely useful, I wanted to build a one-stop shop for all issuer metrics. That includes currency conversion (e.g., financial report in RMB, market cap in HKD, and the transaction itself in yet another currency), as well as automatically pulling the 5-day closing prices instead of manually writing down each date and price — something I've done countless times before.</p>
+                    </div>
+                  </div>
+                  <div class="project-right">
+                    <div class="project-features">
+                      <h4>Key Features</h4>
+                      <div class="feature">
+                        <span class="feature-num">01</span>
+                        <div class="feature-body">
+                          <span class="feature-title">AI Document Extraction</span>
+                          <span class="feature-desc">Upload PDF or HKEX URL. Smart page selection extracts assets, profit/loss, and revenue automatically.</span>
+                        </div>
+                      </div>
+                      <div class="feature">
+                        <span class="feature-num">02</span>
+                        <div class="feature-body">
+                          <span class="feature-title">Live Market Data</span>
+                          <span class="feature-desc">Auto-fetch 5-day average closing prices and issued shares directly from HKEX.</span>
+                        </div>
+                      </div>
+                      <div class="feature">
+                        <span class="feature-num">03</span>
+                        <div class="feature-body">
+                          <span class="feature-title">Currency Conversion</span>
+                          <span class="feature-desc">Real-time Bank of China exchange rates with automatic currency detection.</span>
+                        </div>
+                      </div>
+                      <div class="feature">
+                        <span class="feature-num">04</span>
+                        <div class="feature-body">
+                          <span class="feature-title">Interim Reports</span>
+                          <span class="feature-desc">Automatically applies interim figures for assets ratio per HKEX rules.</span>
+                        </div>
+                      </div>
+                      <div class="feature">
+                        <span class="feature-num">05</span>
+                        <div class="feature-body">
+                          <span class="feature-title">Citation Tracking</span>
+                          <span class="feature-desc">Every metric includes page references, source text, and confidence scores.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <span class="project-tag">Tool</span>
-          </a>
+          </div>
           <a href="https://isto.ch/" target="_blank" rel="noopener" class="project animate-on-scroll">
             <img src="images/isto-preview.jpg" alt="isto.ch preview" class="project-thumb" onerror="this.style.display='none'">
             <div class="project-info">
@@ -65,7 +132,7 @@
           <span class="skill">AI Product Building</span>
           <span class="skill">Corporate Law</span>
           <span class="skill">Product Management</span>
-          <span class="skill">UX Design</span>
+          <span class="skill">UI UX Design</span>
           <span class="skill">Workflow Automation</span>
         </div>
       </section>
@@ -73,28 +140,28 @@
       <section class="section animate-on-scroll">
         <div class="section-label">Inspired by</div>
         <div class="inspirations">
-          <a href="https://www.youtube.com/@aliabdaal" target="_blank" rel="noopener" class="inspiration">
-            <span class="inspiration-name">Ali Abdaal</span>
-            <span class="inspiration-desc">Productivity & building in public</span>
+          <a href="https://www.lennysnewsletter.com/podcast" target="_blank" rel="noopener" class="inspiration">
+            <span class="inspiration-name">Lenny's Podcast</span>
+            <span class="inspiration-desc">Product leadership conversations</span>
           </a>
           <a href="https://meshtimes.beehiiv.com/" target="_blank" rel="noopener" class="inspiration">
             <span class="inspiration-name">Meshtimes</span>
             <span class="inspiration-desc">Building and creating fun things</span>
           </a>
-          <a href="https://www.lennysnewsletter.com/podcast" target="_blank" rel="noopener" class="inspiration">
-            <span class="inspiration-name">Lenny's Podcast</span>
-            <span class="inspiration-desc">Product leadership conversations</span>
+          <a href="https://www.youtube.com/@aliabdaal" target="_blank" rel="noopener" class="inspiration">
+            <span class="inspiration-name">Ali Abdaal</span>
+            <span class="inspiration-desc">Productivity & building in public</span>
           </a>
         </div>
       </section>
     </main>
 
     <footer class="footer animate-on-scroll">
-      <span class="footer-text">Available for innovation or product roles and projects — send me a <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="footer-email">LinkedIn DM</a> or <a href="mailto:anissayc.ng@gmail.com" class="footer-email">drop me an email</a></span>
-      <span class="footer-year">2026</span>
+      <span class="footer-text">Available for opportunities in this space, send me a <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="footer-email">LinkedIn DM</a> or <a href="mailto:anissayc.ng@gmail.com" class="footer-email">email me</a></span>
     </footer>
   </div>
 
+  <script src="https://player.vimeo.com/api/player.js"></script>
   <script>
     // Subtle entrance animations
     document.addEventListener('DOMContentLoaded', () => {
@@ -120,6 +187,35 @@
       const animateElements = document.querySelectorAll('.animate-on-scroll');
       animateElements.forEach(element => {
         observer.observe(element);
+      });
+
+      // Expandable project cards
+      document.querySelectorAll('.project-expandable').forEach(card => {
+        const trigger = card.querySelector('.project-trigger');
+        const closeBtn = card.querySelector('.project-close');
+
+        trigger.addEventListener('click', () => {
+          card.classList.toggle('expanded');
+          if (card.classList.contains('expanded')) {
+            // Scroll the card into better view
+            setTimeout(() => {
+              card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 100);
+          }
+        });
+
+        // Keyboard accessibility
+        trigger.addEventListener('keydown', (e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            trigger.click();
+          }
+        });
+
+        closeBtn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          card.classList.remove('expanded');
+        });
       });
     });
   </script>
