@@ -9,6 +9,7 @@
 
 :root {
   --cream: #FAF9F7;
+  --cream-warm: #FCF8F3;
   --cream-dark: #F2F0ED;
   --charcoal: #1C1C1C;
   --charcoal-soft: #3D3D3D;
@@ -17,6 +18,11 @@
   --border: #E5E3E0;
   --accent: #B85C38;
   --accent-soft: #D4A574;
+
+  /* Subtle shadow system */
+  --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-soft: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --shadow-lifted: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 *, *::before, *::after {
@@ -33,7 +39,7 @@ html {
 
 body {
   font-family: 'DM Sans', -apple-system, sans-serif;
-  background: var(--cream);
+  background: radial-gradient(ellipse at top center, var(--cream-warm) 0%, var(--cream) 50%);
   color: var(--charcoal);
   line-height: 1.5;
   min-height: 100vh;
@@ -68,11 +74,21 @@ body:not(.loaded) .page {
   gap: 14px;
 }
 
-.headshot {
+.headshot-wrap {
   width: 52px;
   height: 52px;
   border-radius: 8px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: var(--shadow-soft);
+}
+
+.headshot {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  object-position: center 15%;
+  transform: scale(1.3);
 }
 
 .header h1 {
@@ -165,11 +181,14 @@ body:not(.loaded) .page {
   padding: 14px 16px;
   background: var(--cream);
   text-decoration: none;
-  transition: background 0.15s ease;
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project:hover {
   background: var(--cream-dark);
+  box-shadow: var(--shadow-lifted);
+  transform: translateY(-2px);
 }
 
 .project-thumb {
@@ -312,6 +331,27 @@ a.inspiration span {
   color: var(--stone-light);
 }
 
+/* Scroll Animations */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.animate-on-scroll.animate-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered animation delays for sequential items */
+.animate-on-scroll:nth-child(1) { transition-delay: 0s; }
+.animate-on-scroll:nth-child(2) { transition-delay: 0.1s; }
+.animate-on-scroll:nth-child(3) { transition-delay: 0.2s; }
+.animate-on-scroll:nth-child(4) { transition-delay: 0.3s; }
+.animate-on-scroll:nth-child(5) { transition-delay: 0.4s; }
+.animate-on-scroll:nth-child(6) { transition-delay: 0.5s; }
+
 /* Responsive */
 @media (max-width: 480px) {
   .page {
@@ -346,5 +386,12 @@ a.inspiration span {
   .skill,
   .inspiration {
     transition: none;
+  }
+
+  /* Disable scroll animations */
+  .animate-on-scroll {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

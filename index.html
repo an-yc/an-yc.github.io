@@ -11,12 +11,12 @@
 </head>
 <body>
   <div class="page">
-    <header class="header">
+    <header class="header animate-on-scroll">
       <div class="header-intro">
-        <img src="images/ani.jpeg" alt="Anissa Ng" class="headshot">
+        <div class="headshot-wrap"><img src="images/ani.jpeg" alt="Anissa Ng" class="headshot"></div>
         <div>
           <h1>Anissa Ng</h1>
-          <p class="header-role">Product · AI · Legal Tech</p>
+          <p class="header-role">Product · AI · Legal</p>
         </div>
       </div>
       <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="header-link">
@@ -28,14 +28,14 @@
     </header>
 
     <main class="main">
-      <section class="intro">
-        <p class="intro-text">Building AI-powered products and websites. Previously Corporate Associate at Sidley Austin.</p>
+      <section class="intro animate-on-scroll">
+        <p class="intro-text">Building AI-powered products and sites at the intersection of tech and law. Previously a Corporate Associate at Sidley Austin.</p>
       </section>
 
-      <section class="section">
+      <section class="section animate-on-scroll">
         <div class="section-label">Projects</div>
         <div class="projects">
-          <a href="#" class="project">
+          <a href="#" class="project animate-on-scroll">
             <div class="project-thumb video-thumb">
               <svg class="play-icon" width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M8 5v14l11-7z"/>
@@ -47,7 +47,7 @@
             </div>
             <span class="project-tag">Tool</span>
           </a>
-          <a href="https://isto.ch/" target="_blank" rel="noopener" class="project">
+          <a href="https://isto.ch/" target="_blank" rel="noopener" class="project animate-on-scroll">
             <img src="images/isto-preview.jpg" alt="isto.ch preview" class="project-thumb" onerror="this.style.display='none'">
             <div class="project-info">
               <h3>isto.ch Revamp</h3>
@@ -58,21 +58,19 @@
                   </div>
       </section>
 
-      <section class="section">
+      <section class="section animate-on-scroll">
         <div class="section-label">Expertise</div>
         <div class="skills">
           <span class="skill">Legal Technology</span>
+          <span class="skill">AI Product Building</span>
+          <span class="skill">Corporate Law</span>
           <span class="skill">Product Management</span>
-          <span class="skill">M&A / Corporate</span>
-          <span class="skill">AI Integration</span>
-          <span class="skill">UI/UX Design</span>
-          <span class="skill">User Research</span>
-          <span class="skill">Framer</span>
-          <span class="skill">Doc Automation</span>
+          <span class="skill">UX Design</span>
+          <span class="skill">Workflow Automation</span>
         </div>
       </section>
 
-      <section class="section">
+      <section class="section animate-on-scroll">
         <div class="section-label">Inspired by</div>
         <div class="inspirations">
           <a href="https://www.youtube.com/@aliabdaal" target="_blank" rel="noopener" class="inspiration">
@@ -91,8 +89,8 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <span class="footer-text">Available for innovation or product roles and projects — <a href="mailto:anissayc.ng@gmail.com" class="footer-email">send me an email</a></span>
+    <footer class="footer animate-on-scroll">
+      <span class="footer-text">Available for innovation or product roles and projects — send me a <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="footer-email">LinkedIn DM</a> or <a href="mailto:anissayc.ng@gmail.com" class="footer-email">drop me an email</a></span>
       <span class="footer-year">2026</span>
     </footer>
   </div>
@@ -101,6 +99,28 @@
     // Subtle entrance animations
     document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.add('loaded');
+
+      // Intersection Observer for scroll animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate-in');
+            // Optionally unobserve after animation to improve performance
+            observer.unobserve(entry.target);
+          }
+        });
+      }, observerOptions);
+
+      // Observe all elements with animate-on-scroll class
+      const animateElements = document.querySelectorAll('.animate-on-scroll');
+      animateElements.forEach(element => {
+        observer.observe(element);
+      });
     });
   </script>
 </body>
