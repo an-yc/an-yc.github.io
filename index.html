@@ -3,12 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anissa - Product, AI, Legal</title>
+  <title>Anissa Ng - Product, AI & Legal Technology</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Anissa Ng builds AI-powered products at the intersection of technology and law. Former Corporate Associate at Sidley Austin, now creating legal tech tools and websites.">
+  <meta name="keywords" content="Anissa Ng, legal technology, AI products, product management, corporate law, legal tech, Hong Kong, HKEX, workflow automation">
+  <meta name="author" content="Anissa Ng">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://an-yc.github.io/">
+
+  <!-- Open Graph / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://an-yc.github.io/">
+  <meta property="og:title" content="Anissa Ng - Product, AI & Legal Technology">
+  <meta property="og:description" content="Building AI-powered products at the intersection of tech and law. Former Corporate Associate at Sidley Austin.">
+  <meta property="og:image" content="https://an-yc.github.io/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Anissa Ng">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Anissa Ng - Product, AI & Legal Technology">
+  <meta name="twitter:description" content="Building AI-powered products at the intersection of tech and law. Former Corporate Associate at Sidley Austin.">
+  <meta name="twitter:image" content="https://an-yc.github.io/images/og-image.png">
+
+  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='Georgia,serif'>A</text></svg>">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Structured Data for AI Search -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Anissa Ng",
+    "url": "https://an-yc.github.io",
+    "jobTitle": "Product Builder & Legal Technologist",
+    "description": "Building AI-powered products at the intersection of technology and law",
+    "knowsAbout": ["Legal Technology", "AI Product Development", "Corporate Law", "Product Management", "UI/UX Design", "Workflow Automation"],
+    "alumniOf": {
+      "@type": "Organization",
+      "name": "Sidley Austin"
+    },
+    "sameAs": [
+      "https://www.linkedin.com/in/anissa-ng/"
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="page">
@@ -64,10 +112,14 @@
               <div class="project-detail-grid">
                 <div class="project-columns">
                   <div class="project-left">
-                    <p class="project-desc">A web application that helps professionals prepare issuer-side metrics for the HKEX CF006 Size Tests checklist under Listing Rules Chapter 14. It automates the extraction of key financial data from reports, fetches market capitalization and live Bank of China exchange rates, generates draft disclosures, and maintains a citation log for easy verification.</p>
+                    <p class="project-desc">A web tool that auto-fills issuer metrics for the HKEX CF006 Size Tests checklist under Listing Rules Chapter 14. It automates the extraction of key financial data from reports, fetches market capitalization and live Bank of China exchange rates, generates draft disclosures, and maintains a citation log for easy verification.</p>
                     <div class="project-background">
                       <h4>Background</h4>
-                      <p>This was a fun project — teaching Claude Code how I usually handle HKEX size tests. To make it genuinely useful, I wanted to build a one-stop shop for all issuer metrics. That includes currency conversion (e.g., financial report in RMB, market cap in HKD, and the transaction itself in yet another currency), as well as automatically pulling the 5-day closing prices instead of manually writing down each date and price — something I've done countless times before.</p>
+                      <p>This was a fun project: turning a repetitive legal workflow into an AI-powered tool. Having done HKEX size tests countless times, I knew the pain points — flipping between financial reports, HKEX, and exchange rate sites while manually copying data.</p>
+                    </div>
+                    <div class="project-ai-note">
+                      <h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 6px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.9V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.1A7 7 0 0 0 12 2z"></path></svg>How AI is used</h4>
+                      <p>AI does exactly one thing here. It reads pre-selected PDF pages and extracts numbers. The rest is deterministic code.</p>
                     </div>
                   </div>
                   <div class="project-right">
@@ -97,8 +149,8 @@
                       <div class="feature">
                         <span class="feature-num">04</span>
                         <div class="feature-body">
-                          <span class="feature-title">Interim Reports</span>
-                          <span class="feature-desc">Automatically applies interim figures for assets ratio per HKEX rules.</span>
+                          <span class="feature-title">Understands the HKEX Rules</span>
+                          <span class="feature-desc">Reminds you to use the correct interim / annual figures based on context.</span>
                         </div>
                       </div>
                       <div class="feature">
@@ -216,6 +268,14 @@
           e.stopPropagation();
           card.classList.remove('expanded');
         });
+      });
+
+      // Close expanded card when clicking outside
+      document.addEventListener('click', (e) => {
+        const expandedCard = document.querySelector('.project-expandable.expanded');
+        if (expandedCard && !expandedCard.contains(e.target)) {
+          expandedCard.classList.remove('expanded');
+        }
       });
     });
   </script>
