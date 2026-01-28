@@ -170,6 +170,26 @@ body:not(.loaded) .page {
   gap: 12px;
 }
 
+.projects-teaser {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.875rem;
+  color: var(--stone);
+  text-align: left;
+  margin-top: 20px;
+  line-height: 1.6;
+}
+
+.projects-teaser a {
+  color: var(--charcoal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: color 0.2s ease;
+}
+
+.projects-teaser a:hover {
+  color: var(--accent);
+}
+
 .projects > .project {
   border: 1px solid var(--border);
   border-radius: 8px;
@@ -576,6 +596,13 @@ body:not(.loaded) .page {
   font-size: 0.9375rem;
   color: var(--charcoal-soft);
   line-height: 1.6;
+}
+
+.project-credit {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.75rem;
+  color: var(--stone);
+  margin-top: 8px;
 }
 
 .project-features {
