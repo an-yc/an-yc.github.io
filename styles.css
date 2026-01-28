@@ -518,7 +518,6 @@ body:not(.loaded) .page {
 .project-background p {
   font-family: 'Instrument Serif', Georgia, serif;
   font-size: 0.9375rem;
-  font-style: italic;
   color: var(--charcoal-soft);
   line-height: 1.6;
 }
@@ -575,7 +574,6 @@ body:not(.loaded) .page {
 .project-ai-note p {
   font-family: 'Instrument Serif', Georgia, serif;
   font-size: 0.9375rem;
-  font-style: italic;
   color: var(--charcoal-soft);
   line-height: 1.6;
 }
