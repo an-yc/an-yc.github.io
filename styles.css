@@ -802,8 +802,8 @@ a.inspiration span {
   }
 
   .inspiration {
-    flex-direction: column;
-    gap: 2px;
+    flex-direction: row;
+    gap: 8px;
   }
 
   .project-expandable.expanded {
