@@ -1,6 +1,6 @@
 /*
   - Instrument Serif
-  - DM Sans 
+  - Public Sans
 */
 
 :root {
@@ -34,7 +34,7 @@ html {
 }
 
 body {
-  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-family: 'Public Sans', -apple-system, sans-serif;
   background: radial-gradient(ellipse at top center, var(--cream-warm) 0%, var(--cream) 50%);
   color: var(--charcoal);
   line-height: 1.5;
@@ -201,7 +201,7 @@ body:not(.loaded) .canvas {
 }
 
 .projects-teaser {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.875rem;
   color: var(--stone);
   text-align: left;
@@ -509,7 +509,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-skills h4 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -537,7 +537,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-ai-note li strong {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.8125rem;
   font-weight: 600;
   color: var(--charcoal);
@@ -620,7 +620,7 @@ body:not(.loaded) .canvas {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.8125rem;
   font-weight: 500;
   color: var(--stone);
@@ -908,7 +908,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-desc {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.9375rem;
   color: var(--charcoal-soft);
   line-height: 1.75;
@@ -923,7 +923,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-background h4 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -935,7 +935,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-features h4 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -947,7 +947,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-background p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.9375rem;
   color: var(--charcoal-soft);
   line-height: 1.6;
@@ -988,7 +988,7 @@ body:not(.loaded) .canvas {
 .project-ai-note h4 {
   display: flex;
   align-items: center;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1014,7 +1014,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-credit {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.75rem;
   color: var(--stone);
   margin-top: 8px;
@@ -1113,7 +1113,7 @@ body:not(.loaded) .canvas {
 }
 
 .design-focuses h4 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
@@ -1170,7 +1170,7 @@ body:not(.loaded) .canvas {
 }
 
 .design-focus-text p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Public Sans', sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--charcoal-soft);
