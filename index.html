@@ -79,7 +79,7 @@
               <div class="headshot-wrap"><img src="images/ani.jpeg" alt="Anissa Ng" class="headshot"></div>
               <div>
                 <h1>Anissa Ng</h1>
-                <p class="header-role">Product · AI · Legal</p>
+                <p class="header-role">Legal · AI · Product</p>
               </div>
             </div>
             <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="header-link">
@@ -92,7 +92,7 @@
 
           <main class="main">
             <section class="intro animate-on-scroll">
-              <p class="intro-text">Building AI-powered products and sites at the intersection of tech and law. Previously a Corporate Associate at Sidley Austin.</p>
+              <p class="intro-text">Lawyer turned AI product builder. Now building the tools I wished I had. Previously a Corporate Associate at Sidley Austin.</p>
             </section>
 
             <section class="section animate-on-scroll">
@@ -184,6 +184,148 @@
                     </div>
                   </div>
                 </div>
+
+                <div class="project-expandable">
+                  <div class="project project-trigger project-hero animate-on-scroll" role="button" tabindex="0">
+                    <div class="project-hero-video" onclick="event.stopPropagation()">
+                      <iframe src="https://player.vimeo.com/video/1173148355?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&amp;autoplay=1&amp;muted=1&amp;loop=1" frameborder="0" allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media" referrerpolicy="strict-origin-when-cross-origin" title="HK Regulatory Chatbot Demo"></iframe>
+                    </div>
+                    <div class="project-hero-bar">
+                      <div class="project-info">
+                        <h3>HK Regulatory Chatbot</h3>
+                        <p>AI chatbot for Hong Kong Listing Rules — ask a question, get an answer with rule citations</p>
+                      </div>
+                      <div class="project-hero-footer">
+                        <span class="demo-coming-soon">Private beta</span>
+                        <div class="project-hero-actions">
+                          <span class="project-tag">Tool</span>
+                          <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-detail">
+                    <button class="project-close" aria-label="Close">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <div class="project-detail-grid">
+                      <div class="project-columns">
+                        <div class="project-left">
+                          <p class="project-desc">Ask a question about the HKEX Listing Rules, get an answer grounded in the actual rulebook with specific rule citations.</p>
+                          <div class="project-background">
+                            <h4>Background</h4>
+                            <p>The HKEX Listing Rules span hundreds of PDFs across chapters, guidance materials, and FAQs. Lawyers search them manually. My best method was Google with <code>site:en-rules.hkex.com.hk</code>.</p>
+                            <br>
+                            <p>HK Regulatory Chatbot puts the entire rulebook and all supplementary materials into a single AI-powered interface where every answer traces back to a specific rule. No more outdated rules, no more outdated client guidance published by a law firm.</p>
+                          </div>
+                          <div class="project-ai-note">
+                            <h4><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align: -1px; margin-right: 6px;"><path d="M9 18h6"></path><path d="M10 22h4"></path><path d="M12 2a7 7 0 0 0-4 12.9V17a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-2.1A7 7 0 0 0 12 2z"></path></svg>Inspiration</h4>
+                            <p>This project was inspired by the Vault feature in Harvey AI. I wanted to see how I could replicate it with rules I'm familiar with and test the same core challenge of making a closed legal corpus searchable via AI.</p>
+                          </div>
+                          <p class="project-credit">Built with Cursor and Claude Code.</p>
+                        </div>
+                        <div class="project-right">
+                          <div class="project-features">
+                            <h4>Key Features</h4>
+                            <div class="feature">
+                              <span class="feature-num">01</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Full Rulebook Coverage with Index</span>
+                                <span class="feature-desc">You know exactly where this bot bases its answer from. Automated pipeline ingests the entire HKEX Main Board rulebook — all sections, guidance chapters, appendices, and special regimes.</span>
+                              </div>
+                            </div>
+                            <div class="feature">
+                              <span class="feature-num">02</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Legal-Optimised Search</span>
+                                <span class="feature-desc">Retrieves the most relevant regulatory text using legal-domain embeddings, with metadata for chapter, section, and rule number.</span>
+                              </div>
+                            </div>
+                            <div class="feature">
+                              <span class="feature-num">03</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Source Attribution</span>
+                                <span class="feature-desc">Users can trace every answer back to the exact Listing Rule. Collapsible source panel shows rule citations alongside the response — no black-box answers.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Summa Nota card commented out
+                <div class="project-expandable">
+                  <div class="project project-trigger project-hero animate-on-scroll" role="button" tabindex="0">
+                    <div class="project-hero-placeholder gradient-teal">
+                      <span class="placeholder-title">Summa Nota</span>
+                    </div>
+                    <div class="project-hero-bar">
+                      <div class="project-info">
+                        <h3>Summa Nota</h3>
+                      </div>
+                      <div class="project-hero-footer">
+                        <span class="demo-coming-soon">Private beta</span>
+                        <div class="project-hero-actions">
+                          <span class="project-tag">Tool</span>
+                          <svg class="expand-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"></polyline>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="project-detail">
+                    <button class="project-close" aria-label="Close">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                      </svg>
+                    </button>
+                    <div class="project-detail-grid">
+                      <div class="project-columns">
+                        <div class="project-left">
+                          <p class="project-desc">Upload a Hong Kong court judgment, get a structured case summary that reads like it was written by a barrister, stating the significance in law. Built on corpus from the top sets.</p>
+                          <p class="project-credit">Built with Cursor and Claude Code.</p>
+                        </div>
+                        <div class="project-right">
+                          <div class="project-features">
+                            <h4>Key Features</h4>
+                            <div class="feature">
+                              <span class="feature-num">01</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Style-Matched Summaries</span>
+                                <span class="feature-desc">Auto-selects author style by legal area based on 335 real barrister articles.</span>
+                              </div>
+                            </div>
+                            <div class="feature">
+                              <span class="feature-num">02</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Hallucination Checking</span>
+                                <span class="feature-desc">Every claim verified against source paragraphs in the judgment.</span>
+                              </div>
+                            </div>
+                            <div class="feature">
+                              <span class="feature-num">03</span>
+                              <div class="feature-body">
+                                <span class="feature-title">Chat Refinement & DOCX Export</span>
+                                <span class="feature-desc">Adjust tone or switch author style via conversation, then export to chambers-formatted Word.</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                -->
+
               </div>
             </section>
 
@@ -202,6 +344,7 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </a>
+                <!-- 2HOME card commented out
                 <a class="design-card" data-page="2" href="#2home">
                   <div class="design-card-img">
                     <img src="images/2home.png" alt="2HOME Studio" style="object-position: top">
@@ -214,18 +357,21 @@
                     <polyline points="9 18 15 12 9 6"></polyline>
                   </svg>
                 </a>
+                -->
               </div>
             </section>
 
             <section class="section animate-on-scroll">
               <div class="section-label">Skills</div>
               <div class="skills">
-                <span class="skill">Legal Technology</span>
-                <span class="skill">AI Product Building</span>
-                <span class="skill">Corporate Law</span>
+                <span class="skill">HK Regulatory Analysis</span>
+                <span class="skill">Legal Research</span>
                 <span class="skill">Product Management</span>
+                <span class="skill">Prompt Engineering</span>
+                <span class="skill">RAG Pipeline Design</span>
                 <span class="skill">UI UX Design</span>
                 <span class="skill">Workflow Automation</span>
+                <span class="skill">AI Output Evaluation</span>
               </div>
             </section>
 
@@ -249,7 +395,7 @@
           </main>
 
           <footer class="footer animate-on-scroll">
-            <span class="footer-text">Exploring opportunities in legal innovation and AI.<br>Happy to connect. <a href="mailto:anissayc.ng@gmail.com" class="footer-email">Email</a> · <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="footer-email">LinkedIn</a></span>
+            <span class="footer-text">Happy to connect about legal tech, AI, or the intersection. <a href="mailto:anissayc.ng@gmail.com" class="footer-email">Email</a> · <a href="https://www.linkedin.com/in/anissa-ng/" target="_blank" rel="noopener" class="footer-email">LinkedIn</a></span>
           </footer>
         </div>
       </div>
@@ -288,7 +434,7 @@
         </div>
       </div>
 
-      <!-- ==================== PAGE 2: 2HOME ==================== -->
+      <!-- 2HOME page commented out
       <div class="canvas-page" id="page-2home">
         <div class="page page-wide">
           <button class="back-btn">
@@ -347,6 +493,7 @@
           </div>
         </div>
       </div>
+      -->
 
     </div>
   </div>
@@ -360,8 +507,8 @@
       // ===== Canvas Navigation =====
       const track = document.querySelector('.canvas-track');
       const pages = document.querySelectorAll('.canvas-page');
-      const hashMap = { '#isto': 1, '#2home': 2 };
-      const hashes = ['', '#isto', '#2home'];
+      const hashMap = { '#isto': 1 };
+      const hashes = ['', '#isto'];
       let currentPage = 0;
 
       function navigateTo(index, animate = true, pushHistory = true) {
