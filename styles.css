@@ -12,13 +12,14 @@
   --ink-soft: #4A4640;        /* body text, softened */
   --accent: #8A3324;          /* one restrained accent: oxblood */
   --rule: rgba(26, 24, 21, 0.14);
+  --frame-bg: #ECEAE4;        /* keyline-frame placeholder fill */
 
   /* rebus chip (grayscale/duotone image tiles) */
   --chip: #D3CFC5;            /* chip background — matched to the faded photo mid-value */
   --chip-ink: #2A2723;        /* glyph on chip */
   --rebus-cap: 0.9em;         /* one variable tunes the whole rebus set */
 
-  --font-grotesque: "Space Grotesk", "Instrument Sans", system-ui, sans-serif;
+  --font-grotesque: "Space Grotesk", system-ui, sans-serif;
   --font-serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
   --font-mono: "Space Mono", ui-monospace, "SF Mono", Menlo, monospace;
   --font-cjk: "Noto Serif TC", "Libre Caslon Text", serif;
@@ -47,6 +48,7 @@ body {
 img { max-width: 100%; display: block; }
 a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
 
 .page {
   max-width: 72rem;
@@ -190,13 +192,14 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   font-family: var(--font-mono);
   font-size: 0.85rem;
   margin: 1rem 0 0;
+  overflow-wrap: anywhere;   /* long .vercel.app URL never overflows narrow screens */
 }
 
 /* ---------- KEYLINE FRAMES (thin border, no shadow) ---------- */
 .frame {
   margin: 1.6rem 0 0;
   border: 1px solid var(--rule);
-  background: #ECEAE4;
+  background: var(--frame-bg);
   overflow: hidden;
 }
 .frame img { width: 100%; height: 100%; object-fit: cover; }
@@ -213,7 +216,7 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   padding-top: clamp(3rem, 7vw, 5rem);
 }
 .footer-line { font-size: clamp(1.8rem, 5vw, 3.4rem); max-width: 18ch; }
-.footer-link { color: var(--ink); }
+.footer-link { color: var(--ink); white-space: nowrap; }  /* keep word + chip together */
 .footer-link:hover { color: var(--accent); text-decoration: none; }
 .colophon {
   font-family: var(--font-mono);
