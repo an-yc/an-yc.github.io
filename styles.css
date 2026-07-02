@@ -68,7 +68,8 @@ a:hover { text-decoration: underline; text-underline-offset: 3px; }
   overflow: hidden;
   transition: transform 0.18s ease;
 }
-.rebus svg { height: 100%; width: 100%; display: block; }
+.rebus svg,
+.rebus img { height: 100%; width: 100%; display: block; object-fit: cover; }
 .rebus .chip { fill: var(--chip); }
 .rebus .ink  { fill: var(--chip-ink); }
 
