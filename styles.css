@@ -14,9 +14,9 @@
   --rule: rgba(26, 24, 21, 0.14);
 
   /* rebus chip (grayscale/duotone image tiles) */
-  --chip: #E4E1DA;            /* chip background */
+  --chip: #D3CFC5;            /* chip background — matched to the faded photo mid-value */
   --chip-ink: #2A2723;        /* glyph on chip */
-  --rebus-cap: 0.86em;        /* one variable tunes the whole rebus set */
+  --rebus-cap: 0.9em;         /* one variable tunes the whole rebus set */
 
   --font-grotesque: "Space Grotesk", "Instrument Sans", system-ui, sans-serif;
   --font-serif: "Libre Caslon Text", Georgia, "Times New Roman", serif;
