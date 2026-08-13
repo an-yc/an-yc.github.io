@@ -1,11 +1,6 @@
 /*
-  Typefaces
-  - Spectral       display / headings / prose accents
-  - IBM Plex Sans  UI, labels, body sans
-  - Noto Serif TC  Chinese glyphs
-
-  Type scale (5 steps, ratio ~1.2)
-  32px display | 24px lead | 20px heading | 16px body | 13px small
+  - Instrument Serif
+  - Instrument Sans
 */
 
 :root {
@@ -15,15 +10,10 @@
   --charcoal: #1C1C1C;
   --charcoal-soft: #3D3D3D;
   --stone: #6B6B6B;
-  --stone-light: #737373;
+  --stone-light: #9A9A9A;
   --border: #E5E3E0;
-  --accent: #1B4965;
-  --accent-soft: #6E96AC;
-  --accent-dark: #12354A;
-
-  /* Font stacks as tokens so fallback chains cannot drift apart */
-  --font-serif: 'Spectral', Georgia, serif;
-  --font-sans: 'IBM Plex Sans', -apple-system, sans-serif;
+  --accent: #B85C38;
+  --accent-soft: #D4A574;
 
   /* Subtle shadow system */
   --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.04);
@@ -44,7 +34,7 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: 'Instrument Sans', -apple-system, sans-serif;
   background: radial-gradient(ellipse at top center, var(--cream-warm) 0%, var(--cream) 50%);
   color: var(--charcoal);
   line-height: 1.5;
@@ -89,7 +79,7 @@ body:not(.loaded) .canvas {
 }
 
 .page {
-  max-width: 688px;
+  max-width: 540px;
   margin: 0 auto;
   padding: 48px 24px 32px;
 }
@@ -111,7 +101,7 @@ body:not(.loaded) .canvas {
 .header-intro {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .headshot-wrap {
@@ -132,16 +122,16 @@ body:not(.loaded) .canvas {
 }
 
 .header h1 {
-  font-family: var(--font-serif);
+  font-family: 'Instrument Serif', Georgia, serif;
   font-size: 2rem;
   font-weight: 400;
   letter-spacing: -0.02em;
-  line-height: 1.2;
+  line-height: 1.1;
   color: var(--charcoal);
 }
 
 .header-role {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: var(--stone);
   margin-top: 4px;
   letter-spacing: 0.02em;
@@ -150,8 +140,8 @@ body:not(.loaded) .canvas {
 .header-link {
   display: flex;
   align-items: center;
-  gap: 8px;
-  font-size: 1rem;
+  gap: 6px;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--stone);
   text-decoration: none;
@@ -175,13 +165,13 @@ body:not(.loaded) .canvas {
 
 /* Intro */
 .intro {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .intro-text {
-  font-family: var(--font-serif);
+  font-family: 'Instrument Serif', Georgia, serif;
   font-size: 1.25rem;
-  line-height: 1.625;
+  line-height: 1.5;
   color: var(--charcoal-soft);
 }
 
@@ -191,11 +181,11 @@ body:not(.loaded) .canvas {
 
 /* Sections */
 .section {
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .section-label {
-  font-size: 1rem;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -207,16 +197,16 @@ body:not(.loaded) .canvas {
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 12px;
 }
 
 .projects-teaser {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.875rem;
   color: var(--stone);
   text-align: left;
-  margin-top: 24px;
-  line-height: 1.625;
+  margin-top: 20px;
+  line-height: 1.6;
 }
 
 .projects-teaser a {
@@ -284,62 +274,80 @@ body:not(.loaded) .canvas {
 }
 
 .project-info h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--charcoal);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .project-info p {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: var(--stone);
-  line-height: 1.625;
+  line-height: 1.4;
 }
 
 .try-it-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-top: 8px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
-  color: var(--cream);
+  color: var(--stone);
   padding: 6px 14px;
-  background: var(--accent);
-  border: 1px solid var(--accent);
+  background: var(--cream-dark);
+  border: 1px solid var(--border);
   border-radius: 4px;
   text-decoration: none;
   flex-shrink: 0;
   cursor: pointer;
-  box-shadow: var(--shadow-subtle);
-  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s, transform 0.1s;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.1s;
 }
 
 .try-it-btn:hover {
-  background: var(--accent-dark);
-  border-color: var(--accent-dark);
-  box-shadow: var(--shadow-lifted);
-  transform: translateY(-1px);
+  background: var(--border);
+  border-color: var(--stone-light);
 }
 
 .try-it-btn:active {
-  background: var(--accent-dark);
+  transform: scale(0.97);
+  background: var(--stone-light);
   color: var(--cream);
-  box-shadow: var(--shadow-subtle);
-  transform: translateY(0) scale(0.98);
+}
+
+.project-page-header .try-it-btn {
+  color: var(--accent);
+  border-color: var(--accent);
+  background: transparent;
+}
+
+.project-page-header .try-it-btn:hover {
+  background: var(--accent);
+  color: var(--cream);
+  border-color: var(--accent);
+}
+
+.project-page-header .try-it-btn:active {
+  background: var(--accent);
+  color: var(--cream);
 }
 
 .project-tag {
-  /* Same pill treatment as .skill */
-  font-size: 1rem;
+  font-size: 0.6875rem;
   font-weight: 500;
-  color: var(--charcoal-soft);
-  padding: 6px 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--stone-light);
+  padding: 4px 8px;
   background: var(--cream-dark);
-  border-radius: 100px;
+  border-radius: 4px;
   flex-shrink: 0;
+}
+
+.project:hover .project-tag {
+  background: var(--border);
 }
 
 /* Expandable Project Card */
@@ -358,13 +366,9 @@ body:not(.loaded) .canvas {
 
 .project-expandable.expanded {
   position: relative;
-  /* Breakout stays centred on the page column at any container width.
-     Deriving both margins from the resolved width keeps left and right
-     overhang equal even once min() clamps the width. */
-  --expanded-width: min(720px, calc(100vw - 48px));
-  width: var(--expanded-width);
-  margin-left: calc((100% - var(--expanded-width)) / 2);
-  margin-right: calc((100% - var(--expanded-width)) / 2);
+  width: min(900px, calc(100% + 360px));
+  margin-left: -180px;
+  margin-right: -180px;
   border-radius: 16px;
   box-shadow:
     0 1px 2px rgba(0, 0, 0, 0.02),
@@ -397,27 +401,11 @@ body:not(.loaded) .canvas {
   transition: border-radius 0.3s ease;
 }
 
-/* Poster sits behind the Vimeo iframe. If the embed is blocked by a network,
-   firewall, or Vimeo outage, the card keeps a real still instead of going
-   black. The iframe paints over this once it loads. */
-.project-hero-video[data-poster] {
-  background-image: var(--poster);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 .project-expandable.expanded .project-hero-video {
   border-radius: 16px 16px 0 0;
 }
 
 .project-hero-video iframe {
-  /* Videos are 1.70 and 1.575 aspect inside a 16:9 frame, so the Vimeo player
-     pillarboxes. Scaling to the container/video aspect ratio makes the picture
-     cover the frame; origin is top so the crop comes off the bottom, where the
-     recording is desktop wallpaper rather than app window. */
-  transform: scale(var(--video-cover, 1));
-  transform-origin: center top;
   position: absolute;
   top: 0;
   left: 0;
@@ -453,7 +441,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-detail-media-inline {
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
@@ -482,8 +470,8 @@ body:not(.loaded) .canvas {
 }
 
 .project-hero-placeholder .placeholder-title {
-  font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.75rem;
   font-weight: 400;
   color: rgba(255, 255, 255, 0.9);
   letter-spacing: -0.02em;
@@ -502,9 +490,9 @@ body:not(.loaded) .canvas {
 .demo-coming-soon {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   margin-top: 8px;
-  font-size: 1rem;
+  font-size: 0.75rem;
   font-weight: 500;
   letter-spacing: 0.03em;
   color: var(--stone-light);
@@ -521,8 +509,8 @@ body:not(.loaded) .canvas {
 }
 
 .project-skills h4 {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -538,19 +526,19 @@ body:not(.loaded) .canvas {
 
 /* AI note list styling */
 .project-ai-note ul {
-  font-family: var(--font-serif);
-  font-size: 1rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 0.9375rem;
   color: var(--charcoal-soft);
-  line-height: 1.625;
+  line-height: 1.6;
   padding-left: 18px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
 }
 
 .project-ai-note li strong {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.8125rem;
   font-weight: 600;
   color: var(--charcoal);
 }
@@ -603,17 +591,17 @@ body:not(.loaded) .canvas {
 }
 
 .design-card-info h3 {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.125rem;
   font-weight: 400;
   color: var(--charcoal);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .design-card-info p {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: var(--stone);
-  line-height: 1.625;
+  line-height: 1.4;
 }
 
 .design-card-arrow {
@@ -631,9 +619,9 @@ body:not(.loaded) .canvas {
 .back-btn {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  gap: 6px;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--stone);
   background: none;
@@ -679,21 +667,6 @@ body:not(.loaded) .canvas {
   aspect-ratio: 16 / 9;
 }
 
-/* Static hero for sites that refuse framing (isto.ch sends
-   x-frame-options: DENY). Matches the iframe hero's proportions so both
-   project pages open at the same height. */
-.project-page-hero-static {
-  overflow: hidden;
-  aspect-ratio: 16 / 9;
-}
-
-.project-page-hero-static img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: top center;
-}
-
 .project-page-hero-iframe iframe {
   width: 1080px;
   height: 675px;
@@ -703,7 +676,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-page-header {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 .project-page-header .project-tag {
@@ -712,20 +685,20 @@ body:not(.loaded) .canvas {
 }
 
 .project-page-header h2 {
-  font-family: var(--font-serif);
-  font-size: 2rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 1.75rem;
   font-weight: 400;
   letter-spacing: -0.02em;
   color: var(--charcoal);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   line-height: 1.2;
 }
 
 .project-page-header > p {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   color: var(--stone);
-  line-height: 1.625;
-  margin-bottom: 16px;
+  line-height: 1.55;
+  margin-bottom: 14px;
 }
 
 /* Features visible by default on project pages (not inside expandable card) */
@@ -765,12 +738,6 @@ body:not(.loaded) .canvas {
   gap: 12px;
   padding: 14px 16px;
   width: 100%;
-}
-
-/* Expanded panel shares one gutter: the hero bar picks up the detail grid's
-   36px inset so the card title and the detail columns share a left edge. */
-.project-expandable.expanded .project-hero-bar {
-  padding: 18px 36px 20px;
 }
 
 .project-hero-footer {
@@ -899,7 +866,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-video > div {
-  border-radius: 8px;
+  border-radius: 10px;
   overflow: hidden;
   box-shadow:
     0 8px 32px rgba(0, 0, 0, 0.12),
@@ -907,7 +874,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-video iframe {
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .project-columns {
@@ -918,7 +885,7 @@ body:not(.loaded) .canvas {
 
 .project-page .project-columns {
   grid-template-columns: 1fr;
-  gap: 32px;
+  gap: 40px;
 }
 
 .project-left {
@@ -941,10 +908,10 @@ body:not(.loaded) .canvas {
 }
 
 .project-desc {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9375rem;
   color: var(--charcoal-soft);
-  line-height: 1.625;
+  line-height: 1.75;
   letter-spacing: -0.01em;
 }
 
@@ -956,8 +923,8 @@ body:not(.loaded) .canvas {
 }
 
 .project-background h4 {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -968,8 +935,8 @@ body:not(.loaded) .canvas {
 }
 
 .project-features h4 {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -980,19 +947,19 @@ body:not(.loaded) .canvas {
 }
 
 .project-background p {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9375rem;
   color: var(--charcoal-soft);
-  line-height: 1.625;
+  line-height: 1.6;
 }
 
 /* AI Note - Editorial Aside */
 .project-ai-note {
   position: relative;
   padding: 20px 24px;
-  background: linear-gradient(135deg, rgba(27, 73, 101, 0.05) 0%, rgba(110, 150, 172, 0.09) 100%);
+  background: linear-gradient(135deg, rgba(184, 92, 56, 0.04) 0%, rgba(212, 165, 116, 0.06) 100%);
   border-radius: 8px;
-  border: 1px solid rgba(27, 73, 101, 0.12);
+  border: 1px solid rgba(184, 92, 56, 0.12);
   overflow: hidden;
 }
 
@@ -1013,7 +980,7 @@ body:not(.loaded) .canvas {
   right: 16px;
   width: 40px;
   height: 40px;
-  background: radial-gradient(circle, rgba(27, 73, 101, 0.08) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(184, 92, 56, 0.08) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -1021,13 +988,13 @@ body:not(.loaded) .canvas {
 .project-ai-note h4 {
   display: flex;
   align-items: center;
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.6875rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.12em;
   color: var(--accent);
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 
 .project-ai-note h4 svg {
@@ -1036,10 +1003,10 @@ body:not(.loaded) .canvas {
 }
 
 .project-ai-note p {
-  font-family: var(--font-serif);
-  font-size: 1rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 0.9375rem;
   color: var(--charcoal-soft);
-  line-height: 1.625;
+  line-height: 1.6;
 }
 
 .zh-serif {
@@ -1047,8 +1014,8 @@ body:not(.loaded) .canvas {
 }
 
 .project-credit {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.75rem;
   color: var(--stone);
   margin-top: 8px;
 }
@@ -1062,7 +1029,7 @@ body:not(.loaded) .canvas {
 .feature {
   display: grid;
   grid-template-columns: 28px 1fr;
-  gap: 12px;
+  gap: 14px;
   padding: 20px 0;
   background: transparent;
   border-bottom: 1px solid var(--border);
@@ -1096,36 +1063,34 @@ body:not(.loaded) .canvas {
 }
 
 .feature-num {
-  font-family: var(--font-serif);
+  font-family: 'Instrument Serif', Georgia, serif;
   font-size: 1.25rem;
   font-weight: 400;
-  color: var(--accent);
-  line-height: 1.2;
+  color: var(--accent-soft);
+  line-height: 1.1;
   letter-spacing: -0.02em;
 }
 
 .feature-body {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 6px;
   min-width: 0;
 }
 
 .feature-title {
-  font-family: var(--font-serif);
-  font-size: 1rem;
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-size: 0.9375rem;
   font-weight: 400;
   color: var(--charcoal);
-  line-height: 1.2;
+  line-height: 1.35;
   letter-spacing: -0.01em;
 }
 
 .feature-desc {
-  /* Body tier, not the label tier: this is the only 13px text on the site
-     doing real reading work rather than labelling. */
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: var(--stone);
-  line-height: 1.625;
+  line-height: 1.55;
 }
 
 .feature-media {
@@ -1148,11 +1113,11 @@ body:not(.loaded) .canvas {
 }
 
 .design-focuses h4 {
-  font-family: var(--font-sans);
-  font-size: 1rem;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.7rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   color: var(--stone);
   margin-bottom: -8px;
 }
@@ -1199,15 +1164,15 @@ body:not(.loaded) .canvas {
 }
 
 .design-focus-title {
-  font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-family: 'Instrument Serif', serif;
+  font-size: 1.125rem;
   color: var(--charcoal);
 }
 
 .design-focus-text p {
-  font-family: var(--font-sans);
-  font-size: 1rem;
-  line-height: 1.625;
+  font-family: 'Instrument Sans', sans-serif;
+  font-size: 0.9375rem;
+  line-height: 1.6;
   color: var(--charcoal-soft);
 }
 
@@ -1215,11 +1180,11 @@ body:not(.loaded) .canvas {
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .skill {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--charcoal-soft);
   padding: 6px 12px;
@@ -1256,16 +1221,13 @@ a.inspiration span {
 }
 
 .inspiration-name {
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 500;
   color: var(--charcoal);
 }
 
 .inspiration-desc {
-  /* Matches the name's size because the two sit inline: at 13px against a 16px
-     name the description just read as small. Weight and colour carry the
-     hierarchy instead. */
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: var(--stone);
 }
 
@@ -1273,14 +1235,14 @@ a.inspiration span {
 .footer {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding-top: 32px;
+  gap: 6px;
+  padding-top: 28px;
   margin-top: 12px;
   border-top: 1px solid var(--border);
 }
 
 .footer-text {
-  font-size: 1rem;
+  font-size: 0.8125rem;
   color: var(--charcoal-soft);
 }
 
@@ -1295,7 +1257,7 @@ a.inspiration span {
 }
 
 .footer-year {
-  font-size: 1rem;
+  font-size: 0.75rem;
   color: var(--stone-light);
 }
 
@@ -1333,8 +1295,7 @@ a.inspiration span {
   }
 
 
-  .project-page-hero-iframe,
-  .project-page-hero-static {
+  .project-page-hero-iframe {
     aspect-ratio: 4 / 3;
   }
 
@@ -1355,11 +1316,11 @@ a.inspiration span {
   }
 
   .header h1 {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 
   .intro-text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
 
   .project {
@@ -1392,7 +1353,7 @@ a.inspiration span {
 
   .project-columns {
     grid-template-columns: 1fr;
-    gap: 32px;
+    gap: 28px;
   }
 
   .project-right {
@@ -1403,7 +1364,7 @@ a.inspiration span {
   }
 
   .project-desc {
-    font-size: 1rem;
+    font-size: 0.9375rem;
   }
 
   .project-background {
@@ -1461,16 +1422,16 @@ a.inspiration span {
   }
 
   .project-page-header p {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .project-desc {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .project-background p,
   .project-ai-note p {
-    font-size: 1rem;
+    font-size: 0.8125rem;
   }
 
   .feature-media img {
@@ -1514,91 +1475,5 @@ a.inspiration span {
 
   .project-close {
     transform: scale(1) !important;
-  }
-}
-
-/* Prose paragraph rhythm (matches 24px separation) */
-.project-background p + p,
-.project-ai-note p + p,
-.design-focus-text p + p,
-.project-desc + .project-desc,
-.project-page-header > p + p,
-.feature-desc + .feature-desc {
-  margin-top: 24px;
-}
-
-
-/* ============================================================
-   Accessibility
-   ============================================================ */
-
-/* Visible keyboard focus. The stylesheet previously defined none, so focus
-   fell back to whatever the browser drew, which is inconsistent across
-   browsers and weak against cream. */
-a:focus-visible,
-button:focus-visible,
-[role="button"]:focus-visible,
-[tabindex]:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
-  border-radius: 4px;
-}
-
-/* Touch targets. WCAG 2.5.8 asks for 24x24 minimum; these go to 44x44 so they
-   are comfortable on a phone. Inline links inside a sentence (the footer
-   Email / LinkedIn pair) are exempt from the rule and are left alone so the
-   prose does not break up. */
-.project-close {
-  width: 44px;
-  height: 44px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.try-it-btn,
-.header-link {
-  min-height: 44px;
-}
-
-.inspiration {
-  display: flex;
-  align-items: baseline;
-  /* No min-height on desktop: the 24px text box already satisfies WCAG 2.5.8.
-     The larger comfort target is scoped to touch pointers below. */
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .inspiration {
-    min-height: 44px;
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .skill {
-    min-height: 44px;
-    display: inline-flex;
-    align-items: center;
-  }
-}
-
-
-/* Inspired by: descriptions were starting wherever each name happened to end
-   (530 / 492 / 487px), so the second column had a ragged left edge. A minimum
-   width on the name lines them all up. Stacks below 480px where a two-column
-   row would be too tight. */
-.inspiration-name {
-  min-width: 136px;
-}
-
-@media (max-width: 480px) {
-  a.inspiration {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    padding: 4px 0;
-  }
-  .inspiration-name {
-    min-width: 0;
   }
 }
