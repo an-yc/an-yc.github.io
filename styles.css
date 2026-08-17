@@ -103,7 +103,7 @@ body:not(.loaded) .canvas {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 32px;
+  margin-bottom: 48px;
   padding-bottom: 24px;
   border-bottom: 1px solid var(--border);
 }
@@ -147,6 +147,12 @@ body:not(.loaded) .canvas {
   letter-spacing: 0.02em;
 }
 
+.header-links {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
 .header-link {
   display: flex;
   align-items: center;
@@ -173,9 +179,13 @@ body:not(.loaded) .canvas {
   color: #0A66C2;
 }
 
+.github-icon {
+  color: var(--charcoal);
+}
+
 /* Intro */
 .intro {
-  margin-bottom: 32px;
+  margin-bottom: 48px;
 }
 
 .intro-text {
@@ -207,7 +217,7 @@ body:not(.loaded) .canvas {
 .projects {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 40px;
 }
 
 .projects-teaser {
@@ -288,7 +298,7 @@ body:not(.loaded) .canvas {
   font-size: 1.25rem;
   font-weight: 400;
   color: var(--charcoal);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .project-info p {
@@ -361,7 +371,13 @@ body:not(.loaded) .canvas {
   /* Breakout stays centred on the page column at any container width.
      Deriving both margins from the resolved width keeps left and right
      overhang equal even once min() clamps the width. */
-  --expanded-width: min(720px, calc(100vw - 48px));
+  /* Width is capped by viewport height as well as width: the hero is 16:9, so
+     w x 9/16 is the video height. 80vh keeps that video at ~45% of the screen,
+     which leaves the write-up visible alongside it. Tall screens get the full
+     900px; a 900px-tall laptop resolves to 720px. */
+  /* The 80vh term never drops the card below 760px, otherwise a short viewport
+     resolves it narrower than the 640px column and the breakout reads inward. */
+  --expanded-width: min(900px, calc(100vw - 48px), max(80vh, 760px));
   width: var(--expanded-width);
   margin-left: calc((100% - var(--expanded-width)) / 2);
   margin-right: calc((100% - var(--expanded-width)) / 2);
@@ -499,22 +515,6 @@ body:not(.loaded) .canvas {
 }
 
 /* Demo Coming Soon badge */
-.demo-coming-soon {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  margin-top: 8px;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.03em;
-  color: var(--stone-light);
-  padding: 6px 14px;
-  background: transparent;
-  border: 1px dashed var(--border);
-  border-radius: 4px;
-  flex-shrink: 0;
-}
-
 /* Skills tags inside project detail */
 .project-skills {
   margin-top: 4px;
@@ -747,7 +747,7 @@ body:not(.loaded) .canvas {
 }
 
 .project-detail-media {
-  padding: 24px 36px 0;
+  padding: 24px 32px 0;
   min-height: 0;
 }
 
@@ -762,15 +762,25 @@ body:not(.loaded) .canvas {
 .project-hero-bar {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  padding: 14px 16px;
+  gap: 24px;
+  padding: 24px 24px 28px;
   width: 100%;
+}
+
+/* No CTA button: the footer row is just the chevron, so the card needs less air */
+.project-hero-bar:not(:has(.try-it-btn)) {
+  gap: 8px;
+  padding-bottom: 16px;
+}
+
+.project-expandable.expanded .project-hero-bar:not(:has(.try-it-btn)) {
+  padding-bottom: 16px;
 }
 
 /* Expanded panel shares one gutter: the hero bar picks up the detail grid's
    36px inset so the card title and the detail columns share a left edge. */
 .project-expandable.expanded .project-hero-bar {
-  padding: 18px 36px 20px;
+  padding: 16px 32px 24px;
 }
 
 .project-hero-footer {
@@ -784,6 +794,8 @@ body:not(.loaded) .canvas {
   display: flex;
   align-items: center;
   gap: 12px;
+  /* Stays right-aligned even when it is the only child of the footer row */
+  margin-left: auto;
 }
 
 /* Old thumb video (keep for compatibility) */
@@ -880,7 +892,7 @@ body:not(.loaded) .canvas {
   display: grid;
   grid-template-columns: 1fr;
   gap: 32px;
-  padding: 32px 36px 36px;
+  padding: 32px;
   min-height: 0;
   opacity: 0;
   transform: translateY(8px);
@@ -1366,6 +1378,37 @@ a.inspiration span {
     padding: 12px 14px;
   }
 
+  /* Two labelled links squeeze the name onto two lines here, so go icon-only */
+  .header-link span {
+    display: none;
+  }
+
+  .header-link {
+    padding: 8px;
+  }
+
+  .header-link svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Narrow screens can't spare the 24px side gutter for the hero bar */
+  .project-hero-bar,
+  .project-expandable.expanded .project-hero-bar {
+    gap: 16px;
+    padding: 16px 16px 20px;
+  }
+
+  .project-hero-bar:not(:has(.try-it-btn)),
+  .project-expandable.expanded .project-hero-bar:not(:has(.try-it-btn)) {
+    gap: 8px;
+    padding-bottom: 12px;
+  }
+
+  .projects {
+    gap: 28px;
+  }
+
   .inspiration {
     flex-direction: row;
     gap: 8px;
@@ -1429,9 +1472,12 @@ a.inspiration span {
     display: block;
   }
 
+  /* 270px lands on the description at this width. Park it in the video's
+     top-left instead — clear of the text and of Vimeo's own top-right controls. */
   .project-close {
-    top: 270px;
-    right: 16px;
+    top: 24px;
+    left: 20px;
+    right: auto;
   }
 
   .page-wide {
